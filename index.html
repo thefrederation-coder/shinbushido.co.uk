@@ -1,0 +1,212 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shin Bushido — Under Construction</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        crimson: {
+                            DEFAULT: '#E60026',
+                            glow: '#FF1A3C',
+                            dark: '#990019'
+                        },
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            glow: '#F3E5AB'
+                        },
+                        charcoal: {
+                            900: '#0A0A0C',
+                            800: '#121216',
+                            700: '#1A1A22',
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Cyberpunk / Modern Samurai Animations & Glows */
+        .glow-red {
+            text-shadow: 0 0 10px rgba(230, 0, 38, 0.7), 0 0 20px rgba(230, 0, 38, 0.4);
+        }
+        .glow-gold {
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.7), 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+        .box-glow {
+            box-shadow: 0 0 25px rgba(230, 0, 38, 0.25);
+        }
+        .box-glow-hover:hover {
+            box-shadow: 0 0 35px rgba(230, 0, 38, 0.45);
+        }
+        .bg-cyber-grid {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.05); }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-charcoal-900 text-gray-100 font-sans min-h-screen flex flex-col justify-between selection:bg-crimson selection:text-white relative overflow-x-hidden">
+
+    <!-- Background Grid Effect & Ambient Lights -->
+    <div class="fixed inset-0 bg-cyber-grid pointer-events-none z-0"></div>
+    <div class="fixed top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-crimson-dark/20 rounded-full blur-[120px] animate-pulse-slow pointer-events-none z-0"></div>
+    <div class="fixed bottom-10 right-10 w-[300px] h-[300px] bg-gold/10 rounded-full blur-[100px] pointer-events-none z-0"></div>
+
+    <!-- Header Navigation Bar -->
+    <header class="relative z-10 w-full max-w-7xl mx-auto px-6 py-6 flex justify-between items-center border-b border-white/10">
+        <div class="flex items-center space-x-3">
+            <!-- Modern Samurai Katana Cross SVG Emblem -->
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-crimson to-charcoal-800 p-0.5 shadow-lg flex items-center justify-center">
+                <div class="w-full h-full bg-charcoal-900 rounded-[7px] flex items-center justify-center text-crimson">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M12,2L9,9L2,12L9,15L12,22L15,15L22,12L15,9L12,2Z"/>
+                    </svg>
+                </div>
+            </div>
+            <span class="font-cinzel font-bold text-2xl tracking-wider text-white">
+                SHIN<span class="text-crimson glow-red">BUSHIDO</span>
+            </span>
+        </div>
+        <div>
+            <a href="mailto:info@shinbushido.co.uk" class="text-xs md:text-sm font-semibold tracking-wider text-gray-400 hover:text-gold transition-colors duration-200 flex items-center gap-2">
+                <i class="fa-solid fa-envelope text-crimson"></i>
+                <span class="hidden sm:inline">info@shinbushido.co.uk</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10 max-w-4xl mx-auto px-6 py-12 flex-1 flex flex-col items-center text-center justify-center">
+
+        <!-- Status Pill -->
+        <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-crimson/10 border border-crimson/40 text-crimson text-xs font-bold tracking-widest uppercase mb-6 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-crimson animate-ping"></span>
+            <span>Under Construction &bull; Coming Soon</span>
+        </div>
+
+        <!-- Hero Heading -->
+        <h1 class="font-cinzel text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mb-4">
+            THE WAY OF THE <br class="hidden sm:block"/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-crimson via-red-500 to-gold glow-red">
+                MODERN WARRIOR
+            </span>
+        </h1>
+
+        <p class="text-gray-400 text-base sm:text-lg max-w-2xl mb-10 leading-relaxed">
+            We are forging something exceptional. <strong class="text-gray-200">Shin Bushido</strong> is preparing to unveil the ultimate martial arts experience.
+        </p>
+
+        <!-- Video Trailer Section -->
+        <div class="w-full mb-12">
+            <h2 class="font-cinzel text-sm sm:text-base font-bold tracking-widest text-gold uppercase mb-4 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-play text-crimson text-xs"></i>
+                In the meantime, watch this trailer to get inspired
+                <i class="fa-solid fa-play text-crimson text-xs"></i>
+            </h2>
+            
+            <div class="relative w-full rounded-2xl overflow-hidden border border-white/10 box-glow box-glow-hover transition-all duration-300 bg-black aspect-video">
+                <iframe 
+                    class="absolute top-0 left-0 w-full h-full border-0"
+                    src="https://www.youtube.com/embed/Xt4X4FvXk2A" 
+                    title="Street Fighter Official Trailer" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Newsletter CTA Card -->
+        <div class="w-full max-w-xl bg-charcoal-800/80 backdrop-blur-md p-8 rounded-2xl border border-white/10 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-crimson via-gold to-crimson"></div>
+            
+            <h3 class="font-cinzel text-xl sm:text-2xl font-bold text-white mb-2">Be First On The Path</h3>
+            <p class="text-gray-400 text-sm mb-6">Subscribe to receive exclusive updates and early access notifications.</p>
+
+            <form id="subscribeForm" onsubmit="handleSubscribe(event)" class="flex flex-col sm:flex-row gap-3">
+                <input 
+                    type="email" 
+                    id="emailInput"
+                    required 
+                    placeholder="Enter your email address..."
+                    class="flex-1 bg-charcoal-900 border border-white/15 focus:border-crimson focus:ring-1 focus:ring-crimson text-white px-4 py-3.5 rounded-xl text-sm outline-none transition-all placeholder:text-gray-600"
+                />
+                <button 
+                    type="submit" 
+                    class="bg-gradient-to-r from-crimson to-crimson-dark hover:from-red-600 hover:to-crimson text-white font-semibold px-6 py-3.5 rounded-xl text-sm tracking-wider uppercase transition-all duration-300 transform active:scale-95 shadow-lg shadow-crimson/20 flex items-center justify-center gap-2"
+                >
+                    <span>Notify Me</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </form>
+
+            <div id="statusMessage" class="hidden mt-4 text-sm font-medium p-3 rounded-lg"></div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 w-full max-w-7xl mx-auto px-6 py-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <div>
+            &copy; <span id="year"></span> Shin Bushido (shinbushido.co.uk). All rights reserved.
+        </div>
+        
+        <!-- Social Icons -->
+        <div class="flex items-center space-x-6 text-gray-400 text-base">
+            <a href="#" class="hover:text-crimson transition-colors" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="hover:text-crimson transition-colors" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="hover:text-crimson transition-colors" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="mailto:info@shinbushido.co.uk" class="hover:text-gold transition-colors" title="Contact Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Set dynamic current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Handle Newsletter Form Submission
+        function handleSubscribe(e) {
+            e.preventDefault();
+            const emailInput = document.getElementById('emailInput');
+            const statusMsg = document.getElementById('statusMessage');
+
+            if (emailInput.value.trim()) {
+                statusMsg.className = "mt-4 text-sm font-medium p-3 rounded-lg bg-emerald-950/80 border border-emerald-600/50 text-emerald-400 text-center";
+                statusMsg.textContent = "Thank you! You have been added to the notification list.";
+                statusMsg.classList.remove('hidden');
+                emailInput.value = '';
+
+                setTimeout(() => {
+                    statusMsg.classList.add('hidden');
+                }, 5000);
+            }
+        }
+    </script>
+</body>
+</html>
+```
